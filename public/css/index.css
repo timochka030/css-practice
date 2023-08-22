@@ -207,7 +207,7 @@ a[class*="btn"] {
   background: red;
 } */
 /* //=================================== */
-/* :root {
+:root {
   background: white;
 }
 
@@ -352,4 +352,4 @@ div input[placeholder="Введіть своє ім'я"] {
 .w::after {
   content: "➤";
   color: red;
-} */
+}
