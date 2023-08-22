@@ -1,4 +1,8 @@
-:root {
+.box {
+  background: grey;
+}
+
+/* :root {
   background: purple;
 }
 
@@ -71,4 +75,281 @@ h1 + p {
 
 h1 ~ p {
   background: pink;
+} */
+
+/* ===================================== */
+
+/* li:first-child {
+  color: blue;
+}
+
+.card-dark {
+  background: gray;
+}
+
+.item {
+  color: green;
+} */
+
+/* .item:first-child {
+  color: blue;
+}
+
+.item:last-child {
+  color: red;
+} */
+
+/* .item:only-child {
+  color: yellow;
+} */
+
+/* .item:first-of-type {
+  color: blue;
+}
+
+.item:last-of-type {
+  color: red;
+}
+
+.item:only-of-type {
+  color: yellow;
+}
+
+.item:nth-child(6) {
+  color: blueviolet;
+} */
+
+/* .item:nth-child(even) {
+  color: rgb(43, 46, 226);
+} */
+
+/* .item:nth-child(3n - 2) {
+  color: rgb(226, 226, 43);
+} */
+
+/* .item:nth-last-child(3) {
+  color: rgb(226, 43, 153);
+}
+
+.item:nth-last-of-type(2n) {
+  color: rgb(226, 226, 43);
+}
+
+.item:not(p) {
+  color: aquamarine;
+}
+
+p:empty {
+  height: 10px;
+  background: red;
+} */
+
+/* ===================================== */
+
+/* .card-dark {
+  background: gray;
+}
+
+.input-dark {
+  background: rgb(194, 193, 193);
+}
+
+.input-dark[required] {
+  background: rgb(255, 0, 0);
+}
+
+.input-dark[type="number"] {
+  background: rgb(55, 255, 0);
+}
+
+.card.img[alt~="small"] {
+  height: 500px;
+}
+
+.a[rel~="external"] {
+  background: blue;
+}
+
+button[class|="btn"] {
+  background: red;
+}
+
+button[class|="btn"] {
+  background: red;
+}
+
+a[class*="btn"] {
+  background: green;
+}
+
+.btn::first-letter {
+  color: blue;
+}
+
+.big-text::first-line {
+  color: rgb(255, 0, 0);
+}
+
+.input-dark::placeholder {
+  color: rgb(47, 255, 0);
+  background: blue;
+}
+
+.big-text::before {
+  content: "$$$";
+  color: green;
+}
+
+.big-text::before,
+.big-text::after {
+  content: "$$$";
+  color: green;
+  background: red;
+} */
+
+:root {
+  background: white;
+}
+
+* {
+  color: black;
+}
+
+.blue {
+  color: blue;
+}
+
+.green {
+  color: green;
+}
+
+#blue {
+  color: blue;
+}
+
+section .box div {
+  background: red;
+}
+
+section .box p {
+  background: green;
+}
+
+.brown {
+  background: brown;
+  color: white;
+}
+
+.i ul > li {
+  background: red;
+}
+
+button + span {
+  background: red;
+}
+
+p[class="susid"] ~ p {
+  background: blue;
+  color: white;
+}
+
+.salo {
+  background: yellow;
+}
+
+#bread {
+  background: yellow;
+}
+
+.first-task li:first-child {
+  color: white;
+}
+
+.second-task ul li:first-child {
+  color: yellow;
+}
+
+.third-task ul[class="2yellow"] li:first-child {
+  background: yellow;
+}
+
+.four-task ul li:last-child {
+  background: yellow;
+}
+
+.five-task ul[class="2white"] li:last-child {
+  color: white;
+}
+
+section div[class="only-child-task"] div:only-child {
+  color: red;
+}
+
+.seven-task span:first-of-type {
+  background: red;
+}
+
+.eight-task span:last-of-type {
+  background: red;
+}
+
+.text-wrapper p:only-of-type {
+  background: yellow;
+}
+
+a[href] {
+  color: white;
+}
+
+.lesson-three-task-two li[value] {
+  color: yellow;
+}
+
+.lesson-three-task-three li[value="3"] {
+  color: red;
+}
+
+button[class~="primary"] {
+  background: blue;
+}
+
+.lesson-three-task-five button[class^="secondary"] {
+  background: red;
+}
+
+.lesson-three-task-six li[class^="b"] {
+  color: green;
+  background: white;
+}
+
+.lesson-three-task-seven li[class*="on"] {
+  color: green;
+  background: white;
+}
+
+.lesson-three-task-eight ul li span[class="tag s"] {
+  background: white;
+  color: blue;
+}
+
+.lesson-three-task-nine h2::first-letter {
+  color: red;
+}
+
+.lesson-three-task-ten::first-line {
+  background: yellow;
+}
+
+div input[placeholder="Введіть своє ім'я"] {
+  background: red;
+}
+
+.v::before {
+  content: "➤";
+  color: blue;
+}
+
+.w::after {
+  content: "➤";
+  color: red;
 }
