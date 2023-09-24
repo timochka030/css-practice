@@ -1,455 +1,70 @@
-.box {
-  background: grey;
+.card {
+  border: none;
 }
 
-.card-dark {
-  background: gray;
-}
-/* :root {
-  background: purple;
-}
-
-html {
-  max-width: 720px;
+.card > p {
+  color: green;
+  -webkit-text-fill-color: red;
+  -webkit-text-stroke: 1px blue;
 }
 
-body {
-  background: #fff;
+p:focus,
+p:active,
+p:hover {
+  -webkit-text-fill-color: rgb(255, 3, 238);
+  -webkit-text-stroke: 1px rgb(187, 255, 0);
+
+  direction: rtl;
+}
+
+#test {
+  color: unset;
+  -webkit-text-fill-color: unset;
+  -webkit-text-stroke: unset;
+
+  text-align: justify;
+
+  tab-size: 10px;
+}
+
+span:hover {
+  text-decoration: line-through wavy red;
+}
+
+.span-b {
+  text-transform: uppercase;
+  text-decoration: underline double blue;
+}
+
+pre {
+  tab-size: 1;
 }
 
 * {
-  color: blue;
+  font-family: "Rubik Dirt", cursive;
+  font-size: 18px;
+  font-weight: 900;
 }
 
-h1 {
-  color: green;
+/* span {
+  font-weight: lighter;
+  font-style: oblique;
+} */
+
+.test {
+  display: none;
 }
 
-.box {
+.block {
+  display: inline-block;
+
   background: grey;
-}
 
-#user {
-  color: rgb(255, 242, 0);
-}
+  min-width: 10px;
 
-h1,
-h2,
-button {
-  color: green;
-}
+  min-height: 100px;
 
-.button {
-  background: rgb(218, 243, 28);
-}
+  max-height: 300px;
 
-#user,
-.user {
-  color: blue;
-}
-
-#box > p {
-  color: paleturquoise;
-}
-
-footer > .user {
-  color: palevioletred;
-}
-
-footer > h1 {
-  color: blueviolet;
-}
-
-footer > .user > em {
-  color: rgb(0, 245, 249);
-}
-
-footer p {
-  color: rgb(96, 170, 4);
-}
-
-.p-top {
-  background: black;
-}
-
-h1 + p {
-  background: black;
-}
-
-h1 ~ p {
-  background: pink;
-} */
-
-/* ===================================== */
-
-/* li:first-child {
-  color: blue;
-}
-
-.card-dark {
-  background: gray;
-}
-
-.item {
-  color: green;
-} */
-
-/* .item:first-child {
-  color: blue;
-}
-
-.item:last-child {
-  color: red;
-} */
-
-/* .item:only-child {
-  color: yellow;
-} */
-
-/* .item:first-of-type {
-  color: blue;
-}
-
-.item:last-of-type {
-  color: red;
-}
-
-.item:only-of-type {
-  color: yellow;
-}
-
-.item:nth-child(6) {
-  color: blueviolet;
-} */
-
-/* .item:nth-child(even) {
-  color: rgb(43, 46, 226);
-} */
-
-/* .item:nth-child(3n - 2) {
-  color: rgb(226, 226, 43);
-} */
-
-/* .item:nth-last-child(3) {
-  color: rgb(226, 43, 153);
-}
-
-.item:nth-last-of-type(2n) {
-  color: rgb(226, 226, 43);
-}
-
-.item:not(p) {
-  color: aquamarine;
-}
-
-p:empty {
-  height: 10px;
-  background: red;
-} */
-
-/* ===================================== */
-
-/* .card-dark {
-  background: gray;
-}
-
-.input-dark {
-  background: rgb(194, 193, 193);
-}
-
-.input-dark[required] {
-  background: rgb(255, 0, 0);
-}
-
-.input-dark[type="number"] {
-  background: rgb(55, 255, 0);
-}
-
-.card.img[alt~="small"] {
-  height: 500px;
-}
-
-.a[rel~="external"] {
-  background: blue;
-}
-
-button[class|="btn"] {
-  background: red;
-}
-
-button[class|="btn"] {
-  background: red;
-}
-
-a[class*="btn"] {
-  background: green;
-}
-
-.btn::first-letter {
-  color: blue;
-}
-
-.big-text::first-line {
-  color: rgb(255, 0, 0);
-}
-
-.input-dark::placeholder {
-  color: rgb(47, 255, 0);
-  background: blue;
-}
-
-.big-text::before {
-  content: "$$$";
-  color: green;
-}
-
-.big-text::before,
-.big-text::after {
-  content: "$$$";
-  color: green;
-  background: red;
-} */
-/* //=================================== */
-:root {
-  background: white;
-}
-
-* {
-  color: black;
-}
-
-.blue {
-  color: blue;
-}
-
-.green {
-  color: green;
-}
-
-#blue {
-  color: blue;
-}
-
-section .box div {
-  background: red;
-}
-
-section .box p {
-  background: green;
-}
-
-.brown {
-  background: brown;
-  color: white;
-}
-
-.i ul > li {
-  background: red;
-}
-
-button + span {
-  background: red;
-}
-
-p[class="susid"] ~ p {
-  background: blue;
-  color: white;
-}
-
-.salo {
-  background: yellow;
-}
-
-#bread {
-  background: yellow;
-}
-
-.first-task li:first-child {
-  color: white;
-}
-
-.second-task ul li:first-child {
-  color: yellow;
-}
-
-.third-task ul[class="2yellow"] li:first-child {
-  background: yellow;
-}
-
-.four-task ul li:last-child {
-  background: yellow;
-}
-
-.five-task ul[class="2white"] li:last-child {
-  color: white;
-}
-
-section div[class="only-child-task"] div:only-child {
-  color: red;
-}
-
-.seven-task span:first-of-type {
-  background: red;
-}
-
-.eight-task span:last-of-type {
-  background: red;
-}
-
-.text-wrapper p:only-of-type {
-  background: yellow;
-}
-
-ul li a[href] {
-  color: white;
-}
-
-.lesson-three-task-two li[value] {
-  color: yellow;
-}
-
-.lesson-three-task-three li[value="3"] {
-  color: red;
-}
-
-button[class~="primary"] {
-  background: blue;
-}
-
-.lesson-three-task-five button[class^="secondary"] {
-  background: red;
-}
-
-.lesson-three-task-six li[class^="b"] {
-  color: green;
-  background: white;
-}
-
-.lesson-three-task-seven li[class*="on"] {
-  color: green;
-  background: white;
-}
-
-.lesson-three-task-eight ul li span[class="tag s"] {
-  background: white;
-  color: blue;
-}
-
-.lesson-three-task-nine h2::first-letter {
-  color: red;
-}
-
-.lesson-three-task-ten::first-line {
-  background: yellow;
-}
-
-div input[placeholder="Введіть своє ім'я"] {
-  background: red;
-}
-
-.v::before {
-  content: "➤";
-  color: blue;
-}
-
-.w::after {
-  content: "➤";
-  color: red;
-}
-
-.war::selection {
-  background-color: rgb(72, 255, 0);
-  color: rgb(28, 56, 50);
-}
-
-#test:target {
-  color: red;
-}
-
-link:link {
-  color: red;
-}
-
-.link:hover {
-  color: green;
-}
-
-.link:active {
-  color: rgb(255, 0, 68);
-}
-
-/* .card:active {
-  background: rgb(255, 0, 68);
-} */
-
-input {
-  background: rgb(246, 255, 0);
-}
-
-input:focus {
-  background: rgb(41, 51, 255);
-}
-
-/* .card:focus-within {
-  background: blue;
-} */
-
-.card:lang(en) > span::after {
-  content: " (en)";
-}
-
-button {
-  background: greenyellow;
-}
-
-button:enabled {
-  background: rgb(37, 153, 24);
-}
-
-button:disabled {
-  background: rgb(10, 160, 215);
-}
-
-.inp:read-write {
-  color: grey;
-}
-
-.inp:read-only {
-  color: rgb(30, 190, 142);
-}
-
-input[type="checkbox"]:checked ~ span {
-  background: red;
-}
-
-.valid:valid {
-  background: red;
-}
-
-.valid:invalid {
-  background: rgb(84, 248, 38);
-}
-
-.valid:optional {
-  background: goldenrod;
-}
-
-.number:out-of-range {
-  background: red;
-}
-
-.number:focus {
-  background: grey;
-}
-
-.number:in-range {
-  background: rgb(30, 140, 5);
-}
-
-.number:invalid {
-  background: yellow;
-}
-
-input:placeholder-shown ~ span {
-  background: pink;
+  padding: 15px;
 }
