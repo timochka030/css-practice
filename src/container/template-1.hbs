@@ -11,7 +11,6 @@
       </nav>
     </header>
 
-    <hr class="divider" />
 	</div>
 
 	<div class="page_block">
@@ -21,9 +20,29 @@
 	<div class="page_block">
 		<main class="row g-0 plans">
 			{{#each plans}}
-			<div class="col plans_card">
+			<div class="col plans_card ">
 
-				{{> card data=this}}
+							
+				<div class="card plans_card">
+					<div class="card-header">{{name}}</div>
+					
+					<div class="card-body">
+						<div class="card_block">
+							<span class="card_price_amount">${{price}}</span>
+							<span class="card_price_duration">/ mo</span>
+						</div>
+						<ul class="card_block">
+							{{#each features}}
+							<li class="card_description_item">{{this}}</li>
+							
+							{{/each}}
+						</ul>
+						<div class="card_block">
+							<button class="btn {{#if @first }}btn-outline-primary{{else}}btn-primary{{/if}} card_button">{{button}}</button>
+						</div>
+					</div>
+				</div>
+			
 				
 			</div>
 			{{/each}}
@@ -31,8 +50,28 @@
 		</main>
 	</div>
 
+<div class="page_block">
+	<div class="calc">
+		<caption>my table</caption>
+	<table class="table">
+		<tbody>
+			{{#each footer}}
+			<tr>
+				{{#each links}}
+				<td>
+					{{text}}
+				</td>
+				{{/each}}
+				<td></td>
+			</tr>
+			{{/each}}
+			
+		</tbody>
+	</table>
+	</div>
+</div>
+
 	<div class="page_block">
-		<hr class="divider" />
 
 		<footer class="row footer">
 			<div class="col-3">
