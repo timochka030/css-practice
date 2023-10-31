@@ -1,6 +1,11 @@
+:root {
+  --text-color: #212529;
+  --space-medium: 24px;
+}
+
 .page {
   background: #ffffff;
-  padding: 0 15px;
+  padding: var(--space-medium);
 }
 
 .page_content {
@@ -10,16 +15,12 @@
 
 .header {
   padding: 24px;
+
+  border-bottom: 1px solid grey;
 }
 
 .logo {
   font-size: 18px;
-}
-
-.divider {
-  margin: 50px 2px;
-  height: 1px;
-  background: #dee2e6;
 }
 
 .nav {
@@ -33,7 +34,10 @@
 }
 
 .nav_link:hover {
+  text-decoration: underline;
   color: #2f88e0;
+
+  opacity: 50%;
 }
 
 .nav_vertical > .nav_link {
@@ -59,6 +63,8 @@
 
 .footer {
   padding: 24px 0;
+
+  border-top: 1px solid grey;
 }
 
 .footer-copyright {
@@ -72,7 +78,7 @@
 
 .footer_title {
   font-size: 20px;
-  color: #212529;
+  color: var(--text-color, #212529);
 
   display: block;
   margin-bottom: 12px;
@@ -80,7 +86,7 @@
 
 .hero_title {
   font-size: 56px;
-  color: #212529;
+  color: var(--text-color, #212529);
   font-weight: 500;
   margin-bottom: 12px;
   text-align: center;
@@ -88,10 +94,12 @@
 
 .hero_text {
   font-size: 20px;
-  color: #212529;
+  color: var(--text-color, #212529);
   text-align: center;
   max-width: 585px;
   margin: 0 auto;
+
+  line-height: 150%;
 }
 
 .plans_card:not(:last-of-type) {
@@ -102,7 +110,7 @@
   padding: 12px;
   text-align: center;
   font-size: 24px;
-  color: #212529;
+  color: var(--text-color, #212529);
 }
 
 .card_body {
@@ -111,16 +119,18 @@
 
 .card_price_amount {
   font-size: 40px;
-  color: #212529;
+  color: var(--text-color, #212529);
+  cursor: not-allowed;
 }
 
 .card_price_duration {
-  font-size: 29px;
+  font-size: 20px;
   color: #6c757d;
+
+  vertical-align: 12px;
 }
 
 .card_block {
-  margin-bottom: 24px;
   text-align: center;
 }
 
@@ -130,7 +140,7 @@
 
 .card_description_item {
   font-size: 16px;
-  color: #212529;
+  color: var(--text-color, #212529);
 
   display: block;
 }
@@ -141,11 +151,147 @@
 
 .card_button {
   display: block;
-  width: 100%;
+  width: 80%;
   font-size: 19px;
   padding: 9px;
 }
 
 .card {
-  border: 1px solid red;
+  border: 2px solid #0000ff;
+  border-radius: 15px 50px;
+  box-shadow: 0px 0px 5px 5px rgba(243, 212, 111, 0.36);
+}
+
+.card:hover {
+  outline: 2px solid rgb(74, 13, 196);
+  outline-offset: 5px;
+
+  box-shadow: 0px 0px 5px 5px rgba(243, 212, 111, 0.36);
+
+  opacity: 0.5;
+}
+
+.btn {
+  border-radius: 25px;
+}
+
+.btn:hover {
+  box-shadow: 0px 0px 5px 5px rgba(243, 212, 111, 0.36);
+}
+
+h1 {
+  text-shadow: 2px 2px 0px red;
+}
+
+.hero_text {
+  background: grey;
+
+  width: 600px;
+
+  /* hyphenate-character: "=====";
+  word-spacing: 4px; 
+
+   overflow: auto; 
+  resize: horizontal; */
+}
+
+.plans_card:nth-child(2) > .card {
+  visibility: hidden;
+}
+
+.hero_title {
+  max-width: 660;
+  margin: 0 auto;
+  margin-bottom: 12px;
+  height: 65px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+.overflow {
+  overflow-wrap: anywhere;
+}
+
+.page {
+  /* background-color: transparent;
+  background-image: url(/img/qwertyui.avif);
+  background-repeat: no-repeat;
+
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover; */
+}
+
+.hero_text {
+  border-image-source: url(/img/qwertyui.avif);
+  border-image-width: 10% 10%;
+  border-image-slice: 10% 10%;
+  border-image-outset: 40px;
+
+  padding: 40px;
+  color: green;
+}
+
+.card_block {
+  /* list-style-type: upper-alpha; */
+  list-style-position: inside;
+
+  list-style-image: linear-gradient(to bottom right, blue, red);
+
+  padding: 0;
+}
+
+.card_description_item {
+  display: list-item;
+}
+
+/* .table tr {
+  border: 1px solid grey;
+} */
+
+.table tr td {
+  border: 1px solid grey;
+  border-bottom-color: red;
+  border-right-color: blue;
+}
+
+.table {
+  table-layout: fixed;
+  width: 600px;
+
+  border-collapse: separate;
+
+  border-spacing: 10px;
+
+  caption-side: top;
+
+  empty-cells: hide;
+}
+
+.nav_link::before,
+.nav_link::after {
+  /* content: url(/img/qwertyui.avif); */
+
+  width: 10px;
+  height: 10px;
+
+  content: "";
+  display: inline-block;
+  background-image: url(/img/qwertyui.avif);
+}
+
+.nav_link::before {
+  margin-right: 15px;
+}
+
+.nav_link::after {
+  margin-left: 15px;
+}
+
+.calc {
+  width: 600px;
+
+  margin-left: calc(50% - (600px / 2));
 }
