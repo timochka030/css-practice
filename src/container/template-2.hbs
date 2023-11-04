@@ -1,10 +1,10 @@
 <div class="page">
   <div class="page_content">
 	<header class="page_block">
-    <div class="header row">
+    <div class="header">
       {{> header_logo}}
 
-      <nav class="header_nav col-9">
+      <nav class="header_nav">
 
 		<div class="header_nav_right">{{> nav0 list=header}}</div>
 		
@@ -24,9 +24,9 @@
 	</section>
 	
 	<section class="page_block">
-		<div class="row g-4">
+		<div class="flex-container">
 			{{#each preview}}
-				<div class="col-6">
+				<div class="flex_item">
 					{{> cardPreview data=this}}
 				</div>
 			{{/each}}
@@ -39,16 +39,15 @@
 	  <div class="row g-0">
 		<div class="col-12">
 			<div class="list_header">
-				<div class="row g-0">
-					<div class="col-6">
-						<h2>List of posts</h2>
-					</div>
-					<div class="col-6">
-						<div class="category_list">
-							{{#each categories}}
-								<button class="category_button">{{text}}</button>
-							{{/each}}
-						</div>
+				<div>
+					<h2>List of posts</h2>
+				</div>
+
+				<div>
+					<div class="category_list">
+						{{#each categories}}
+							<button class="category_button">{{text}}</button>
+						{{/each}}
 					</div>
 				</div>
 			</div>
@@ -81,13 +80,13 @@
 
 	<footer class="page_block">
 
-		<div class="row footer">
-			<div class="col-3">
+		<div class="footer">
+			<div>
 				{{> header_logo}}
 				<span class="footer-copyright">Copyright 2023-2024</span>
 			</div>
 			{{#each footer}}
-				<div class="col-3">
+				<div>
 					<span class="footer_title">{{title}}</span>
 					{{> nav0 list=links isVertical=true}}
 				</div>
