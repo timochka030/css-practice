@@ -1,6 +1,8 @@
 
 <header class="header">
+	<a href="#test">
       {{> header_logo}}
+	  </a>
       <nav class="header_nav">
 		<div class="header_nav_right">{{> nav0 list=header}}</div>
       </nav>
@@ -12,10 +14,36 @@
 		<h1 class="hero_title">{{title}}</h1>
 		<p class="hero_text">{{text}}</p>
 	</div>
-	<img class="hero_image" src="{{photo}}" alt="Hero image">
+
+	<div class="hero_slider">
+		<div class="hero_slider_icon hero_slider_left">{{left}}</div>
+		
+		<img class="hero_image" src="{{photo}}" alt="Hero image">
+		
+		<div class="hero_slider_icon hero_slider_right">{{right}}</div>
+	</div>
 </div>
 {{/with}}
 
+<input type="text" class="input">
+
+<div class="modal">
+	{{hero.text}} {{hero.text}}
+	{{!-- <img class="modal_image" src="{{hero.photo}}" alt="Hero image"> --}}
+	<div class="modal_text">{{hero.text}} {{hero.text}}</div>
+</div>
+
+<main class="blog">
+	{{#each blog}}
+		{{> cardBlog data=this}}
+	{{/each}}
+</main>
+
+<main class="blog">
+	{{#each blog}}
+		{{> cardBlog data=this}}
+	{{/each}}
+</main>
 
 <main class="blog">
 	{{#each blog}}
@@ -35,7 +63,7 @@
 </div>
 {{/with}}
 
-<footer class="footer">
+<footer class="footer" id="test">
 			<div>
 				{{> header_logo}}
 				<span class="footer-copyright">Copyright 2023-2024</span>
