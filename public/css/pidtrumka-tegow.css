@@ -1,0 +1,8 @@
+strong {
+  font-size: var(--size-d);
+  color: var(--color-title);
+  font-weight: var(--weight-title);
+}
+
+h2 {
+}
