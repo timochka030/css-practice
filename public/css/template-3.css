@@ -1,3 +1,25 @@
+@import "/css/var.css";
+
+@font-face {
+  font-family: "Segment";
+  src: url("/font/Segment-Regular.otf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Segment";
+  src: url("/font/Segment-SemiBold.otf");
+  font-weight: 600;
+}
+
+@layer normalize, main, component, style;
+
+@layer style {
+  .card_button {
+    background: red;
+  }
+}
+
 @keyframes fly {
   from {
     top: 0;
@@ -29,30 +51,6 @@
 
     background: purple;
   }
-}
-
-:root {
-  --space-m: 12px;
-  --space-xm: 16px;
-  --space-l: 24px;
-  --space-b: 36px;
-
-  --size-s: 14px;
-  --size-d: 16px;
-  --size-l: 20px;
-
-  --color-border: #dee2e6;
-  --color-primary: rgb(46, 46, 255);
-  --color-white: white;
-  --color-title: #212529;
-  --color-text: #343a40;
-
-  --border-radius: 12px;
-
-  --weight-title: 500;
-  --weight-text: 400;
-
-  --page-width: 960px;
 }
 
 /*=================*/
@@ -259,10 +257,12 @@
   transition-duration: 1s;
 }
 
-.card_button {
-  color: var(--color-white);
+@layer component {
+  .card_button {
+    color: var(--color-white);
 
-  background-color: var(--color-primary);
+    background-color: var(--color-primary);
+  }
 }
 
 .card_button:hover {
@@ -409,4 +409,86 @@ body:hover .modal {
 
 :root {
   scroll-behavior: smooth;
+}
+
+.blog {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media all and (width <= 600px) {
+  .blog {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media all and (600px < width <= 800px) {
+  .blog {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* @media all and (min-height: 400px) {
+  .page_content {
+    background: red;
+  }
+} */
+
+.form {
+  gap: var(--spase-l);
+}
+
+@media all and (width <=560px) {
+  .form {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .form_info {
+    max-width: 300px;
+    width: 100%;
+    line-height: 150%;
+  }
+
+  .form_content {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.hero_container {
+  container-type: inline-size;
+  container-name: hero;
+
+  height: 500px;
+}
+
+@container hero (width < 960px) {
+  .hero {
+    flex-direction: column;
+  }
+}
+
+.ex {
+  font-size: 1.5em;
+  display: inline-block;
+  margin-left: 2ex;
+
+  line-height: 1.5em;
+}
+
+/* .test {
+  position: absolute;
+  background: red;
+  top: 0;
+  left: 0;
+
+  height: 100vmin;
+  width: 100vmin;
+  z-index: 9999;
+} */
+
+.hero_title {
+  font-size: 5cqw;
 }
