@@ -36,6 +36,7 @@
     <link href="css/normalize.css" rel="stylesheet" />
 
     <link href="css/template-3.css" rel="stylesheet" />
+	
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -52,7 +53,7 @@
   </head>
 
   <body>
-
+{{> nav}}
     {{!  ↓  ця кострукція показує куди шаблонізатору треба вставляти код з container файлу   }}
     <div class="page">
       <div class="page_content">{{{body}}}</div>

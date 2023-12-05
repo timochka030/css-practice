@@ -1,0 +1,89 @@
+<header class="header">
+	<a href="#test">
+      {{> header_logo2}}
+	  </a>
+      <nav class="header_nav">
+		<div class="header_nav_right">{{> nav0 list=header}}</div>
+      </nav>
+</header>
+
+<div class="type-1">
+	{{#with header}}
+	<div class="type-1">
+	<div class="icon">
+		<div class="icon-text">Ad</div>
+	</div>
+	
+		{{#with ad}}
+			<div>
+				<a href="{{url}}" class="link_item">{{text}}</a>
+			</div>
+		{{/with}}
+	
+	</div>
+
+	<div class="users_online">
+		Users online: {{userOnline}}
+	</div>
+	{{/with}}
+</div>
+
+<main class="main">
+	{{#with hero}}
+		<div class="hero">
+			<div class="hero_title">{{title}}</div>
+			<p class="hero_text">{{description}}</p>
+
+			{{#with button}}
+				<a href="{{url}}" class="hero_button">{{text}}</a>
+			{{/with}}
+		</div>
+		
+	{{/with}}
+</main>
+
+<div class="about_card">
+	{{#with about}}
+		<div class="about_title">{{heading}}</div>
+		<p class="about_text">{{info}}</p>
+	{{/with}}
+</div>
+
+<div>
+<div class="type-1">
+<h2 class="articles_title">Our Articles</h2>
+<a class="articles_button">View All</a>
+</div>
+
+<div class="articles_cards">
+{{#each articles}}
+	<div class="">
+		<img src="{{photo}}" class="articles_photo">{{#if isNew}}
+		<div class="new">NEW</div>{{/if}}<strong>{{nickname}}</strong>
+		<div class="articles_name">{{name}}</div>
+		<p class="articles_text">{{description}}</p>
+	</div>
+{{/each}}
+</div>
+<div>
+	
+ 
+
+</div>
+</div>
+
+<footer class="footer" id="test">
+	{{#with footer}}
+			
+			{{#each pages}}
+				<div>
+					<a href="{{path}}" class="footer_title">{{name}}</a>
+					
+				</div>
+			{{/each}}
+			<div>
+				
+				<span class="footer-copyright">Copyright 2023-2024</span>
+			</div>
+	{{/with}}
+</footer>
